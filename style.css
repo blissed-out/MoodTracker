@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+label {
+}
+
+#select-mood{
+    /* min-width: 300px;
+    min-height: 80px; */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 50vw;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
