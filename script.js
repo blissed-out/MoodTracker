@@ -55,7 +55,7 @@ const timeline = document.querySelector(".timeline");
 let moodLogs = [];
 yesButton.addEventListener("click", () => {
   // get data of mood and date
-  const mood = document.querySelector("#select-mood").value;
+  const mood = document.querySelector('input[name="value-radio"]:checked').value;
   const day = dayName(new Date().getDay());
   const date = new Date().getDate();
   const month = monthName(new Date().getMonth());
@@ -83,16 +83,16 @@ function displayData() {
     const storedData = JSON.parse(localStorage.getItem("moodLogs"));
     storedData.forEach((moodLog) => {
       // timeline.innerHTML += `<div> your mod ${moodLog.mood} on ${moodLog.day}, ${moodLog.date} of month ${moodLog.month} and year ${moodLog.year} </div>`;
-      timeline.innerHTML += `
-          <div class="card">
-              <div class="dateBox">
-                  <div class="day">
-                      ${moodLog.day}
-                  </div>
-                  <div class="date">${moodLog.date}</div>
-              </div>
-              <div class="mood">${moodLog.mood}</div>
-      `
+      const displayingData = `<div class="card">
+                    <div class="dateBox">
+                        <div class="day">
+                            ${moodLog.day}
+                        </div>
+                        <div class="date">${moodLog.date}</div>
+                    </div>
+                    <div class="mood">${moodLog.mood}</div>`;
+
+      timeline.insertAdjacentHTML("afterbegin", displayingData);
     });
   }
 }

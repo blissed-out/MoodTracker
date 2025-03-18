@@ -6,30 +6,99 @@ body {
 
 h1 {
     font-size: 90px;
-    color: #778DA9;
+    color: #778da9;
 }
 
-label {
-}
+/* label {
+} */
 
-#select-mood {
+/* #select-mood {
     min-width: 300px;
     min-height: 60px;
     border: 2px solid black;
-    color: #0D1B2A;
+    color: #0d1b2a;
     border-radius: 40px;
     font-size: 30px;
     text-align: center;
-    background-color: #778DA9;
+    background-color: #778da9;
+} */
+
+/* select {
+} */
+
+.radio-input {
+  display: flex;
+  flex-direction: row;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  color:#778da9;
 }
 
+.radio-input input[type="radio"] {
+  display: none;
+}
+
+.radio-input label {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #ccc;
+  background-color: #212121;
+  border-radius: 5px;
+  margin-right: 40px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-input label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-input input[type="radio"]:checked + label:before {
+  background-color: green;
+  top: 0;
+}
+
+.radio-input input[type="radio"]:checked + label {
+  background-color: #778da9;
+  color: #fff;
+  border-color: rgb(129, 235, 129);
+  animation: radio-translate 0.5s ease-in-out;
+}
+
+@keyframes radio-translate {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
 .yesButton {
     min-width: 140px;
     min-height: 40px;
     font-size: 20px;
     border: 2px solid black;
     border-radius: 20px;
-    color: #0D1B2A;
+    color: #0d1b2a;
     background-color: #778da9;
 }
 
@@ -44,8 +113,14 @@ label {
 }
 
 .timeline {
-    background-color: #1B263B;
+    background-color: #1b263b;
     border-radius: 20px;
+    box-shadow:
+        rgba(255, 255, 255, 0.25) 0px 54px 55px,
+        rgba(255, 255, 255, 0.12) 0px -12px 30px,
+        rgba(255, 255, 255, 0.12) 0px 4px 6px,
+        rgba(255, 255, 255, 0.17) 0px 12px 13px,
+        rgba(255, 255, 255, 0.09) 0px -3px 5px;
     margin-top: 80px;
 }
 
@@ -55,12 +130,13 @@ label {
     gap: 13vw;
     align-items: center;
     margin-top: 90px;
-    background-color:#415A77 ;
+    background-color: #415a77;
     min-width: 50vw;
     min-height: 20px;
     border-radius: 10px;
     padding: 20px;
     margin: 30px;
+    box-shadow: rgb(51, 36, 23) 3px 3px 6px 0px inset, rgba(0,0,0, 0.5) -3px -3px 6px 1px inset;
 }
 
 .dateBox {
@@ -69,7 +145,7 @@ label {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color:#778DA9;
+    background-color: #778da9;
     min-width: 80px;
     min-height: 80px;
     border-radius: 10px;
