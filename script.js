@@ -1,6 +1,6 @@
-// get data
-// store data
-// display data
+// get data - done
+// store data - done
+// display data - done
 function dayName(day) {
   switch (day) {
     case 1:
@@ -48,7 +48,10 @@ function monthName(month) {
   }
 }
 
+// function to get seperate moods and date data, to easily display to user
 const yesButton = document.querySelector(".yesButton");
+const container = document.querySelector(".container");
+const timeline = document.querySelector(".timeline");
 let moodLogs = [];
 yesButton.addEventListener("click", () => {
   // get data of mood and date
@@ -70,6 +73,7 @@ yesButton.addEventListener("click", () => {
     year: year,
   });
   localStorage.setItem("moodLogs", JSON.stringify(moodLogs));
+  timeline.innerHTML = "";
   dispatchEvent(new Event("storage"));
 });
 
@@ -78,7 +82,17 @@ function displayData() {
   if (localStorage.getItem("moodLogs")) {
     const storedData = JSON.parse(localStorage.getItem("moodLogs"));
     storedData.forEach((moodLog) => {
-      console.log(moodLog);
+      // timeline.innerHTML += `<div> your mod ${moodLog.mood} on ${moodLog.day}, ${moodLog.date} of month ${moodLog.month} and year ${moodLog.year} </div>`;
+      timeline.innerHTML += `
+          <div class="card">
+              <div class="dateBox">
+                  <div class="day">
+                      ${moodLog.day}
+                  </div>
+                  <div class="date">${moodLog.date}</div>
+              </div>
+              <div class="mood">${moodLog.mood}</div>
+      `
     });
   }
 }

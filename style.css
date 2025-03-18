@@ -1,18 +1,37 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: white;
+    background: #0d1b2a;
+}
+
+h1 {
+    font-size: 90px;
+    color: #778DA9;
 }
 
 label {
 }
 
-#select-mood{
-    /* min-width: 300px;
-    min-height: 80px; */
+#select-mood {
+    min-width: 300px;
+    min-height: 60px;
+    border: 2px solid black;
+    color: #0D1B2A;
+    border-radius: 40px;
+    font-size: 30px;
+    text-align: center;
+    background-color: #778DA9;
 }
 
+.yesButton {
+    min-width: 140px;
+    min-height: 40px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    color: #0D1B2A;
+    background-color: #778da9;
+}
 
 .container {
     display: flex;
@@ -21,5 +40,48 @@ label {
     max-width: 50vw;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 40px;
+}
+
+.timeline {
+    background-color: #1B263B;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.card {
+    display: flex;
+    justify-content: left;
+    gap: 13vw;
+    align-items: center;
+    margin-top: 90px;
+    background-color:#415A77 ;
+    min-width: 50vw;
+    min-height: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px;
+}
+
+.dateBox {
+    display: flex;
+    font-size: 1.5em;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:#778DA9;
+    min-width: 80px;
+    min-height: 80px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.day {
+}
+
+.date {
+}
+
+.mood {
+    font-size: 3em;
 }
