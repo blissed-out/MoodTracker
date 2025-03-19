@@ -12,17 +12,7 @@
                 <h1>Track your Mood</h1>
                 <!-- <img src="" alt="trackingImage" /> -->
             </div>
-            <!-- <div class="select">
-                <label for="select-mood"></label>
-                <select name="mood" id="select-mood">
-                    <option value="Happy">😊 Happy</option>
-                    <option value="Excited">😁 Excited</option>
-                    <option value="Neutral">😐 Neutral</option>
-                    <option value="Angry">😤 Angry</option>
-                    <option value="Sad">☹️ Sad</option>
-                    <option value="Sick">🤒 Sick</option>
-                </select> -->
-            <!-- </div> -->
+            <!-- Displaying emojis to choose from -->
             <div class="radio-input">
               <input value="Happy" name="value-radio" id="value-1" type="radio">
               <label for="value-1">😊</label>
@@ -37,7 +27,23 @@
               <input value="Sick" name="value-radio" id="value-6" type="radio">
               <label for="value-6">🤒</label>
             </div>
-            <button class="yesButton">Yeah</button>
+            <button class="recordButton">Record</button>
+                <!-- option to choose from day, week and month timeline -->
+                <div class="radio-input-timeline">
+                  <label>
+                    <input value="day" name="value-radio-timeline" id="day" type="radio" checked/>
+                    <span>Day</span>
+                  </label>
+                  <label>
+                    <input value="week"  name="value-radio-timeline"id="week" type="radio" />
+                    <span>Week</span>
+                  </label>
+                  <label>
+                    <input value="month" name="value-radio-timeline" id="month" type="radio" />
+                    <span>Month</span>
+                  </label>
+                  <span class="selection"></span>
+                </div>
             <div class="timeline">
             </div>
         </div>
