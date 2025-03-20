@@ -213,9 +213,42 @@ h1 {
         rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
 }
 
+.weekCard {
+    display: flex;
+    justify-content: left;
+    gap: 2vw;
+    align-items: center;
+    margin-top: 90px;
+    background-color: #415a77;
+    min-width: 50vw;
+    min-height: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px;
+    box-shadow:
+        rgb(51, 36, 23) 3px 3px 6px 0px inset,
+        rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+}
+
+.monthCard {
+    display: flex;
+    justify-content: left;
+    gap: 2vw;
+    align-items: center;
+    margin-top: 90px;
+    background-color: #415a77;
+    min-width: 50vw;
+    min-height: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px;
+    box-shadow:
+        rgb(51, 36, 23) 3px 3px 6px 0px inset,
+        rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+}
 .dateBox {
     display: flex;
-    font-size: 1.5em;
+    font-size: 2em;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -235,6 +268,16 @@ h1 {
 .mood {
     font-size: 3em;
 }
+
+.moodWeek {
+    font-size: 1.9em;
+}
+
+.moodMonth {
+    font-size: 1.9em;
+}
+
+
 @media only screen and (max-width: 1000px) {
     .radio-input {
         flex-wrap: wrap;
@@ -244,16 +287,47 @@ h1 {
     padding: 20px;
 }
 .timeline .card .mood{
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .timeline .card .dateBox{
-    font-size: 2em;
+    font-size: 1.8em;
 }
+.timeline .weekCard .dateBox{
+    font-size: 1.4em;
+}
+.timeline .monthCard .dateBox{
+    font-size: 1.4em;
+}
+.timeline .monthCard .moodMonth{
+    font-size: 1.4em;
+}
+.timeline .weekCard .moodWeek{
+    font-size: 1.4em;
+}
+
+}
+
 @media only screen and (max-width: 600px) {
     .timeline .card .mood{
         font-size: 1em;
     }
     .timeline .card .dateBox{
+        font-size: 1em;
+    }
+    .timeline .weekCard .dateBox{
+        font-size: 1em;
+    }
+    .timeline .monthCard .dateBox{
+
+        font-size: 1em;
+    }
+    .timeline .card .dateBox{
+        font-size: 1em;
+    }
+    .timeline .monthCard .moodMonth{
+        font-size: 1em;
+    }
+    .timeline .weekCard .moodWeek{
         font-size: 1em;
     }
 

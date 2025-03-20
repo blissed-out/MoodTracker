@@ -163,28 +163,28 @@ function displayData(choosenTimeline = "day") {
               break;
           }
           countWeekDays++;
-          timeline.innerHTML = `<div class="card">
+          timeline.innerHTML = `<div class="weekCard">
                               <div class="dateBox">
                                   <div class="day">
                                       Week
                                   </div>
                                   <div class="date">${weekNumber}</div>
                               </div>
-                              <div class="mood">☺️: ${happy} 😁: ${excited} 😐: ${neutral} 😤: ${angry} ☹️: ${sad} 🤒: ${sick}</div>
+                              <div class="moodWeek">☺️: ${happy} 😁: ${excited} 😐: ${neutral} 😤: ${angry} ☹️: ${sad} 🤒: ${sick}</div>
           </div>`;
         } else {
           countWeekDays = 0;
           weekNumber++;
           timeline.insertAdjacentHTML(
             "afterbegin",
-            `<div class="card">
+            `<div class="weekCard">
                               <div class="dateBox">
                                   <div class="day">
                                       Week
                                   </div>
                                   <div class="date">${weekNumber}</div>
                               </div>
-                              <div class="mood">☺️: ${happy} 😁: ${excited} 😐: ${neutral} 😤: ${angry} ☹️: ${sad} 🤒: ${sick}</div>
+                              <div class="moodWeek">☺️: ${happy} 😁: ${excited} 😐: ${neutral} 😤: ${angry} ☹️: ${sad} 🤒: ${sick}</div>
           </div>`,
           );
         }
@@ -215,20 +215,20 @@ function displayData(choosenTimeline = "day") {
               break;
           }
           countMonthDays++;
-          timeline.innerHTML = `<div class="card">
+          timeline.innerHTML = `<div class="monthCard">
                               <div class="dateBox">
                                   <div class="date">${moodLog.month}</div>
                               </div>
-                              <div class="mood">☺️: ${happy} 😁: ${excited} 😐: ${neutral} 😤: ${angry} ☹️: ${sad} 🤒: ${sick}</div>
+                              <div class="moodMonth">☺️: ${happy} 😁: ${excited} 😐: ${neutral} 😤: ${angry} ☹️: ${sad} 🤒: ${sick}</div>
           </div>`;
         } else {
           timeline.insertAdjacentHTML(
             "beforeend",
-            `<div class="card">
+            `<div class="monthCard">
                               <div class="dateBox">
                                   <div class="date">${moodLog.month}</div>
                               </div>
-                              <div class="mood">☺️: ${happy} 😁: ${excited} 😐: ${neutral} 😤: ${angry} ☹️: ${sad} 🤒: ${sick}</div>
+                              <div class="moodMonth">☺️: ${happy} 😁: ${excited} 😐: ${neutral} 😤: ${angry} ☹️: ${sad} 🤒: ${sick}</div>
           </div>`,
           );
           countMonthDays = 0;
