@@ -7,6 +7,7 @@ body {
 h1 {
     font-size: 90px;
     color: #778da9;
+    text-shadow: rgba(255,255,255, 0.16) 0px 3px 6px, rgba(255,255,255, 0.23) 0px 3px 6px;
 }
 
 
@@ -38,6 +39,7 @@ h1 {
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease-in-out;
+    box-shadow: rgb(119 141 169) 0px 19px 38px, rgb(30 50 75) 0px 15px 12px;
 }
 
 .radio-input label:before {
@@ -89,7 +91,7 @@ h1 {
   width: 150px;
   height: 60px;
   border-radius: 50px;
-  background-image: linear-gradient(135deg, #feb692 0%, #415a78 100%);
+  background-image: linear-gradient(135deg, #89bec1 0%, #415a78 100%);
   box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
   outline: none;
   cursor: pointer;
@@ -127,11 +129,11 @@ h1 {
     display: flex;
     align-items: center;
     border-radius: 10px;
-    background-color: #212121;
+    background-color: #0d1b2a;
     color: #fff;
     width: var(--container_width);
     overflow: hidden;
-    border: 2px solid #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(255,255,255, 0.3) 0px 3px 7px -3px;
 }
 
 .radio-input-timeline label {
@@ -163,7 +165,7 @@ h1 {
 }
 
 .radio-input-timeline label:has(input:checked) ~ .selection {
-    background-color: #ffe500;
+    background-color: #778da9;
     display: inline-block;
 }
 
