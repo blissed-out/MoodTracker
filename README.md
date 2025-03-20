@@ -13,3 +13,4 @@ A simple Mood Tracker web application that allows users to log their mood using 
 ![screenshot 2](/screenshots/2.png)
 ![screenshot 3](/screenshots/3.png)
 ##  Deployment link
+Hosted [here](https://mood-tracker-flq7fmmxs-mood-trackers-projects.vercel.app/)
